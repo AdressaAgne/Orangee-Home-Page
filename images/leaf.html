@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+    © Agne Ødegaard, © Orangee.me
+-->
+<html lang="en">
+<head>
+    <meta name="author" content="Agne Ødegaard" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/master.css" />
+     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,600|Open+Sans:300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <title>leaf</title>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-31902713-1', 'orangee.me');
+      ga('send', 'pageview');
+    
+    </script>
+</head>
+<body>   
+
+	
+	<div class="span-12" id="top">
+		<div class="container">
+			<div class="span-12" id="album">
+				<h1 class="color-light">leaf <small class="byline"><a href="../#photopgrapy">back</a></small></h1>
+					<div class="span-4 align-center">
+						<a href="../img/web/leaf/portfolio2.jpg" data-lightbox="set1">
+							<div class="border">
+								<img src="../img/web/leaf/portfolio2.jpg" alt="" />
+							</div>
+						</a>
+					</div>
+					
+					<div class="span-4 align-center">
+						<a href="../img/web/leaf/3.jpg" data-lightbox="set1">
+							<div class="border">
+								<img src="../img/web/leaf/3.jpg" alt="" />
+							</div>		
+						</a>
+					</div>
+					<div class="span-2 align-center">
+						<a href="../img/web/leaf/1.jpg" data-lightbox="set1">
+							<div class="border">
+								<img src="../img/web/leaf/1.jpg" alt="" />
+							</div>
+						</a>
+					</div>
+					
+					<div class="span-2 align-center">
+						<a href="../img/web/leaf/2.jpg" data-lightbox="set1">
+							<div class="border">
+								<img src="../img/web/leaf/2.jpg" alt="" />
+							</div>		
+						</a>
+					</div>
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="span-12 whiteBg">
+		<div class="borderFooter"></div>
+		<div class="container">
+			<div class="span-6">
+				<h1 class="color-light">Contact</h1>
+				<p class="color-light">Need a site? Please contact me!</p>
+				<p class="color-light">
+					Agne Ødegaard<br />
+					<a href="mailto:agne240@me.com">agne240@me.com</a><br />
+					Norway: (+47) 94 86 50 63
+				</p>
+			</div>
+			<div class="span-6">
+				<h1 class="color-light">Friends & Family</h1>
+				<p>
+					<a target="_blank" href="http://tommynordli.com/">tommynordli.com</a><br />
+					<a target="_blank" href="http://mrfs.me/">mrfs.me</a><br />
+					<a target="_blank" href="http://daidata.net/">daidata.net</a><br />
+					<a target="_blank" href="http://www.beetlebee.me/">beetlebee.me</a>
+				</p>
+			</div>
+		</div>
+		<div class="span-12">
+			<p class="align-center color-light">© Agne Ødegaard 2013</p>
+		</div>
+	</div>	
+<script src="../js/jquery.js"></script>
+<script src="../js/lightbox.js"></script>
+<script src="../js/OE-ck.js"></script>
+<script>
+    $(function() {
+        var width = $(window).width();
+        var height = $(window).height();
+        function jqUpdateSize() {
+           $("[class*=fullScreen]").css("height", height + "px");
+           width = $(window).width();
+           height = $(window).height();
+        };
+        
+        jqUpdateSize()
+        var resizeTimer;
+        $(window).resize(function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(jqUpdateSize, 0);
+        });
+        
+        
+        //#autoScroll
+        var scrollFrom = 0; 
+        $('a[href*=#]').click(function(e){
+            scrollFrom = $(window).scrollTop();
+            $(window).scrollTop(scrollFrom);
+            var target = '#' + $(this).attr("href").replace(/#/,'');
+            if ($(this).attr("href") != "#myCarousel") {
+        	    $('html,body').animate({
+        	        scrollTop: $(target).offset().top // modification
+        	    },{
+        	     duration: 1000,
+        	     easing: 'swing'
+        	    });
+        	     return false; 	
+            }
+        }); 
+    });
+</script>
+</body>
+</html>

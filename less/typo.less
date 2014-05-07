@@ -1,0 +1,183 @@
+
+body{
+	background-color: @base-bg;
+	color: @font-color;
+	font: @font-base 'Open Sans', sans-serif;
+	line-height: @font-line-height-base;
+	text-align: left;
+    letter-spacing: 1px;
+}
+
+ul li{
+	list-style: none;
+	
+	color: #f8f8f8;
+}
+
+p{	
+	font: @font-base 'Open Sans', sans-serif;
+	text-align: left;
+	line-height: @font-line-height-base;
+	padding: 3px;
+	font-weight: 100;
+	margin: 5px 0px;
+}
+
+.byline{
+	font-size: @font-base * (1 + (@font-base-add/2));
+	font-weight: 100;
+	line-height: 21px;
+}
+
+.align-left{
+	text-align: left;
+}
+.align-right{
+	text-align: right;
+}
+.align-center{
+	text-align: center;
+}
+.align-justify{
+	text-align: justify;
+}
+
+a{
+	color: @font-link-color;
+	text-decoration: none;
+	&:hover{
+		color: @font-link-color-hover;
+	}
+	&:active{
+		color: @font-link-color-active;
+	}
+	&:hover:visited{
+		color: @font-link-color-hover;
+	}
+	&:active:visited{
+		color: @font-link-color-active;
+	}
+	&:visited{
+		color: @font-link-color-visited;
+	}
+	
+}
+a.front, front{
+		color: #f8f8f8;
+		text-decoration: none;
+		&:hover{
+			color: #e7e7e7;
+		}
+		&:active{
+			color: #e7e7e7;
+		}
+		&:visited{
+			color: #f8f8f8;
+			&:hover{
+				color: #e7e7e7;
+			}
+		}
+	}
+
+h6, h5, h4, h3, h2, h1{
+	font-family: 'Josefin Sans', sans-serif;
+	color: @font-color;
+	font-size: @font-base;
+	line-height: @font-line-height-base;
+	text-align: left;
+	margin-bottom: 2px;
+	margin-top: 15px;
+	padding-bottom: 5px;
+	
+}
+h5{
+	font-size: @font-base * (1 + (@font-base-add * 2));
+	line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 2));
+}
+h4{
+	font-size: @font-base * (1 + (@font-base-add * 2));
+	line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 3));
+}
+h3{
+	font-size: @font-base * (1 + (@font-base-add * 2));
+	line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 4));
+}
+h2{
+	font-size: @font-base * (1 + (@font-base-add * 5));
+	line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 5));
+}
+h1{
+	text-align: center;
+	font-size: @font-base * (1 + (@font-base-add * 6));
+	line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 6));
+}
+
+/*base tablet styles*/
+@media (max-width: 800px) {
+	body{
+		font-size: @font-tablet;
+		line-height: @font-line-height-base * (@font-line-height-base-add);
+	}
+	.byline{
+		font-size: @font-tablet * (1 + (@font-base-add));
+		line-height: 21px;
+	}
+	h6{
+		font-size: @font-tablet;
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add));
+	}
+	h5{
+		font-size: @font-tablet * (1 + (@font-base-add));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add));
+	}
+	h4{
+		font-size: @font-tablet * (1 + (@font-base-add * 2));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 2));
+	}
+	h3{
+		font-size: @font-tablet * (1 + (@font-base-add * 3));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 3));
+	}
+	h2{
+		font-size: @font-tablet * (1 + (@font-base-add * 4));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 4));
+	}
+	h1{
+		font-size: @font-tablet * (1 + (@font-base-add * 5));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 5));
+	}
+}
+@media (max-width: 480px) {
+	body{
+		font-size: @font-phone;
+		line-height: @font-line-height-base * (1 - (@font-line-height-base-add * 2));
+	}
+	.byline{
+		font-size: @font-phone * (1 + (@font-base-add));
+		line-height: 21px;
+	}
+	h6{
+		font-size: @font-phone;
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add));
+	}
+	h5{
+		font-size: @font-phone * (1 + (@font-base-add));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add));
+	}
+	h4{
+		font-size: @font-phone * (1 + (@font-base-add * 2));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 2));
+	}
+	h3{
+		font-size: @font-phone * (1 + (@font-base-add * 3));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 3));
+	}
+	h2{
+		font-size: @font-phone * (1 + (@font-base-add * 4));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 4));
+	}
+	h1{
+		font-size: @font-phone * (1 + (@font-base-add * 5));
+		line-height: @font-line-height-base * (1 + (@font-line-height-base-add * 5));
+	}
+}

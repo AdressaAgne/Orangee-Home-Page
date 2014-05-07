@@ -1,0 +1,41 @@
+.container{
+	margin: 0 auto;
+	width: @grid-10;
+	padding: 10px 0px 30px !important;
+}
+
+@media (max-width: 1024px) {
+	.container{
+		width: @grid-11;
+	}
+}
+
+@media (max-width: 800px) {
+	.container{
+		width: @grid-11;
+	}
+}
+
+@media (max-width: 480px) {
+	.container{
+		width: @grid-12;
+	}
+}
+hr{
+  border-top: 1px solid darken(@base-bg, 5%);
+  border-bottom: 1px solid lighten(@base-bg, 5%);
+  border-left: none;
+  border-right: none;
+}
+
+.pane{
+    
+    background-color: lighten(@base-bg, 5%);
+}
+
+.well{
+    border-radius: @base-border-radius;
+	background-color: @well-bg;
+	color: @well-color;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
